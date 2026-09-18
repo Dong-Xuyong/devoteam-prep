@@ -313,13 +313,13 @@
     append(strong, element("h3", "", "Strong evidence"), list(data.fit.strong));
     fit.appendChild(searchable(strong, data.fit.strong, "Fact"));
     var partial = element("article", "content-card ui-card");
-    append(partial, element("h3", "", "Partial or adjacent evidence"), list(data.fit.partial));
+    append(partial, element("h3", "", "Transferable evidence"), list(data.fit.partial));
     fit.appendChild(searchable(partial, data.fit.partial, "Fact"));
     root.appendChild(element("h3", "subsection-title", "Fit map"));
     root.appendChild(fit);
 
     var bridge = element("article", "quote-card ui-card");
-    append(bridge, element("h3", "", "Honest tool-gap bridge"), element("p", "", data.fit.bridge));
+    append(bridge, element("h3", "", "Evidence-depth answer"), element("p", "", data.fit.bridge));
     root.appendChild(searchable(bridge, data.fit.bridge, "Fact"));
 
     replace("role-content", root);
@@ -364,7 +364,7 @@
       story.useFor.forEach(function (tag) {
         tags.appendChild(element("span", "tag", tag));
       });
-      append(body, tags, element("div", "boundary", "Claim boundary: " + story.boundary));
+      append(body, tags, element("div", "boundary", "Evidence scope: " + story.boundary));
       append(details, summary, body);
       root.appendChild(searchable(details, story, story.type));
     });
