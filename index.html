@@ -1,0 +1,261 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#f6f4ef" />
+    <meta name="robots" content="noindex, nofollow" />
+    <meta
+      name="description"
+      content="Privacy-sanitized preparation dashboard for a Devoteam Distributed Cloud AI and Machine Learning Engineering interview."
+    />
+    <title>Devoteam Interview Prep</title>
+    <link rel="stylesheet" href="./dong-ui/theme.css" />
+    <link rel="stylesheet" href="./styles.css" />
+    <script src="./dong-ui/theme.js"></script>
+    <script src="./app.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+    <div class="page-background" aria-hidden="true"></div>
+
+    <header class="site-header nav-glass">
+      <a class="brand" href="#top" aria-label="Devoteam interview prep home">
+        <span class="brand-mark" aria-hidden="true">D</span>
+        <span>
+          <strong>Devoteam Prep</strong>
+          <small>AI / ML engineering</small>
+        </span>
+      </a>
+      <div class="header-actions">
+        <button class="print-button ui-button ui-button--ghost" id="print-page" type="button">
+          Print
+        </button>
+        <button
+          class="dong-theme-toggle"
+          type="button"
+          role="switch"
+          data-dong-theme-toggle
+        >
+          <span class="dong-theme-toggle__icon" aria-hidden="true">☀</span>
+          <span class="dong-theme-toggle__icon" aria-hidden="true">☾</span>
+        </button>
+      </div>
+    </header>
+
+    <nav class="section-nav nav-glass" aria-label="Study sections">
+      <div class="section-nav__track">
+        <a href="#quick" data-nav-section="quick">Start</a>
+        <a href="#company" data-nav-section="company">Company</a>
+        <a href="#role" data-nav-section="role">Role</a>
+        <a href="#stories" data-nav-section="stories">Proof</a>
+        <a href="#process" data-nav-section="process">Process</a>
+        <a href="#technical" data-nav-section="technical">Technical</a>
+        <a href="#questions" data-nav-section="questions">Answers</a>
+        <a href="#ask" data-nav-section="ask">Ask</a>
+        <a href="#diligence" data-nav-section="diligence">Verify</a>
+        <a href="#checklist" data-nav-section="checklist">Checklist</a>
+        <a href="#sources" data-nav-section="sources">Sources</a>
+      </div>
+    </nav>
+
+    <div id="top"></div>
+
+    <section class="hero" aria-labelledby="page-title">
+      <div class="hero__copy">
+        <p class="eyebrow">Interview field guide · updated <span id="updated-date">—</span></p>
+        <h1 id="page-title">Move the conversation from tools to reliable ML delivery.</h1>
+        <p class="hero__hypothesis" id="role-hypothesis">Loading role hypothesis…</p>
+        <div
+          class="tag-row"
+          id="hero-tags"
+          role="list"
+          aria-label="Core role topics"
+        ></div>
+      </div>
+      <aside class="hero__brief ui-card" aria-labelledby="objective-title">
+        <div class="hero__brief-top">
+          <span class="signal-dot" aria-hidden="true"></span>
+          <span id="role-confidence">Loading…</span>
+        </div>
+        <h2 id="objective-title">Conversation objective</h2>
+        <p id="interview-objective">Loading preparation data…</p>
+        <a class="ui-button" href="#quick">Start the two-minute brief</a>
+      </aside>
+    </section>
+
+    <div class="study-controls nav-glass" role="search" aria-label="Filter study guide">
+      <div class="search-field">
+        <label for="global-search">Search the guide</label>
+        <input
+          id="global-search"
+          type="search"
+          inputmode="search"
+          autocomplete="off"
+          placeholder="Try: drift, Kubernetes, forecasting…"
+          aria-controls="main-content"
+        />
+      </div>
+      <div class="filter-field">
+        <label for="evidence-filter">Evidence</label>
+        <select id="evidence-filter" aria-controls="main-content">
+          <option value="all">All evidence</option>
+          <option value="Fact">Facts</option>
+          <option value="Inference">Inferences</option>
+          <option value="Anecdote">Anecdotes</option>
+          <option value="Unknown">Unknowns</option>
+        </select>
+      </div>
+      <button class="ui-button ui-button--secondary" id="clear-filters" type="button">
+        Clear
+      </button>
+      <p class="filter-status" id="filter-status" role="status" aria-live="polite"></p>
+    </div>
+
+    <main id="main-content" tabindex="-1">
+      <div class="load-status ui-card" id="load-status" role="status" aria-live="polite">
+        Loading the interview guide…
+      </div>
+
+      <section class="study-section" id="quick" aria-labelledby="quick-title">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Start here</p>
+            <h2 id="quick-title">Two-minute briefing</h2>
+          </div>
+          <p>Role hypothesis, company facts, proof points, and recruiter questions.</p>
+        </div>
+        <div id="quick-content"></div>
+      </section>
+
+      <section class="study-section" id="company" aria-labelledby="company-title">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Context</p>
+            <h2 id="company-title">Devoteam, Portugal, and Distributed Cloud</h2>
+          </div>
+          <p>Know the current narrative, one concrete client case, and the evidence caveats.</p>
+        </div>
+        <div id="company-content"></div>
+      </section>
+
+      <section class="study-section" id="role" aria-labelledby="role-title">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Target</p>
+            <h2 id="role-title">Role map and title ambiguity</h2>
+          </div>
+          <p>Separate the verified mandate from what the recruiter still needs to confirm.</p>
+        </div>
+        <div id="role-content"></div>
+      </section>
+
+      <section class="study-section" id="stories" aria-labelledby="stories-title">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Your evidence</p>
+            <h2 id="stories-title">Project stories to rehearse</h2>
+          </div>
+          <p>Open each card for a defensible STAR outline and a hard claim boundary.</p>
+        </div>
+        <div id="stories-content"></div>
+      </section>
+
+      <section class="study-section" id="process" aria-labelledby="process-title">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Likely path</p>
+            <h2 id="process-title">Interview process hypothesis</h2>
+          </div>
+          <p>This is preparation guidance, not a confirmed schedule.</p>
+        </div>
+        <div id="process-content"></div>
+      </section>
+
+      <section class="study-section" id="technical" aria-labelledby="technical-title">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Revision</p>
+            <h2 id="technical-title">Technical study deck</h2>
+          </div>
+          <p>Review the mental model, then flip the cards without leaving the page.</p>
+        </div>
+        <div id="technical-content"></div>
+      </section>
+
+      <section class="study-section" id="questions" aria-labelledby="questions-title">
+        <div class="section-heading section-heading--actions">
+          <div>
+            <p class="eyebrow">Practice</p>
+            <h2 id="questions-title">Likely questions and answer guidance</h2>
+          </div>
+          <button class="ui-button ui-button--secondary" id="toggle-answers" type="button">
+            Expand all answers
+          </button>
+        </div>
+        <div id="questions-content"></div>
+      </section>
+
+      <section class="study-section" id="ask" aria-labelledby="ask-title">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Reverse interview</p>
+            <h2 id="ask-title">Questions to ask Devoteam</h2>
+          </div>
+          <p>Select five to seven. Prioritize role scope, real stack, and success criteria.</p>
+        </div>
+        <div id="ask-content"></div>
+      </section>
+
+      <section class="study-section" id="diligence" aria-labelledby="diligence-title">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Due diligence</p>
+            <h2 id="diligence-title">Verify neutrally</h2>
+          </div>
+          <p>Treat crowd-sourced reports as prompts for specific questions, not conclusions.</p>
+        </div>
+        <div id="diligence-content"></div>
+      </section>
+
+      <section class="study-section" id="checklist" aria-labelledby="checklist-title">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Final pass</p>
+            <h2 id="checklist-title">Preparation checklist</h2>
+          </div>
+          <div class="progress-copy">
+            <strong id="progress-value">0%</strong>
+            <span id="progress-label">0 of 0 complete</span>
+          </div>
+        </div>
+        <div class="progress-track" aria-hidden="true">
+          <span id="progress-bar"></span>
+        </div>
+        <div id="checklist-content"></div>
+      </section>
+
+      <section class="study-section" id="sources" aria-labelledby="sources-title">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Evidence</p>
+            <h2 id="sources-title">Linked sources</h2>
+          </div>
+          <p>Primary sources first; anecdotal sources are explicitly marked.</p>
+        </div>
+        <div id="sources-content"></div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>Privacy-sanitized interview study guide. No analytics, trackers, or cloud-stored checklist data.</p>
+      <a href="#top">Back to top</a>
+    </footer>
+
+    <noscript>
+      <p class="noscript-message">
+        This study dashboard needs JavaScript to load its local preparation dataset.
+      </p>
+    </noscript>
+  </body>
+</html>

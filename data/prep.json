@@ -1,0 +1,563 @@
+{
+  "meta": {
+    "title": "Devoteam Interview Prep",
+    "subtitle": "Distributed Cloud · AI / Machine Learning Engineering",
+    "updated": "2026-09-18",
+    "scope": "Public, privacy-sanitized study guide",
+    "legend": {
+      "Fact": "Verified against a primary source or documented project evidence.",
+      "Inference": "Reasoned interpretation that the hiring team has not confirmed.",
+      "Anecdote": "Self-reported signal; use only as a question to verify.",
+      "Unknown": "Not established by a reliable public source."
+    }
+  },
+  "hero": {
+    "roleHypothesis": "A hands-on ML engineering role bridging data-science prototypes and production cloud systems, with possible overlap with Devoteam's adjacent MLOps vacancy.",
+    "confidence": "High on the capability area; medium on the exact title and project.",
+    "objective": "Show production-minded ML evidence, communicate tool gaps without bluffing, and leave with the scope, stack, process, and package clarified.",
+    "tags": ["Python", "Forecasting", "Anomaly detection", "MLOps", "Docker", "Cloud"]
+  },
+  "briefing": [
+    {
+      "title": "What Devoteam is",
+      "text": "An EMEA-focused technology consultancy positioning itself as AI-driven tech consulting. Its current corporate page describes 11,000 people across 25+ countries and more than 30 years in business.",
+      "type": "Fact",
+      "sourceId": "about"
+    },
+    {
+      "title": "Why Portugal matters",
+      "text": "Devoteam says Portugal passed €100M in revenue with 1,400+ specialists and is central to its 2026 push from AI experimentation to production and measurable ROI.",
+      "type": "Fact",
+      "sourceId": "portugal-2026"
+    },
+    {
+      "title": "What the role does",
+      "text": "Build end-to-end ML pipelines, turn prototypes into production-grade Python, deploy on cloud infrastructure, and monitor models, drift, and reliability.",
+      "type": "Fact",
+      "sourceId": "ml-role"
+    },
+    {
+      "title": "How to position yourself",
+      "text": "Lead with forecasting over 1M+ records, hierarchical anomaly-detection research, a tested Dockerized FastAPI AI system, and ownership of a live client service.",
+      "type": "Fact",
+      "sourceId": "candidate-evidence"
+    },
+    {
+      "title": "What not to fake",
+      "text": "Do not imply production ownership of Kubernetes, MLflow, Kubeflow, DVC, feature stores, or hyperscaler ML platforms. Explain the lifecycle and state the hands-on boundary.",
+      "type": "Fact",
+      "sourceId": "candidate-evidence"
+    },
+    {
+      "title": "Best opening question",
+      "text": "I found both the AI/Machine Learning Engineer and MLOps vacancies under Distributed Cloud. Which description is closest to this project?",
+      "type": "Inference",
+      "sourceId": "mlops-role"
+    }
+  ],
+  "companyFacts": [
+    {
+      "value": "11,000",
+      "label": "tech natives",
+      "detail": "Current corporate figure across 25+ EMEA countries.",
+      "featured": true,
+      "type": "Fact",
+      "sourceId": "about"
+    },
+    {
+      "value": "AI-driven",
+      "label": "tech consulting",
+      "detail": "Cloud, data, cybersecurity, AI, and partner platforms.",
+      "featured": true,
+      "type": "Fact",
+      "sourceId": "about"
+    },
+    {
+      "value": "€100M+",
+      "label": "Portugal milestone",
+      "detail": "Reported with 1,400+ specialists in January 2026.",
+      "featured": true,
+      "type": "Fact",
+      "sourceId": "portugal-2026"
+    },
+    {
+      "value": "Multi-cloud",
+      "label": "AWS · Google · Microsoft",
+      "detail": "Partner expertise is central to delivery and learning.",
+      "featured": false,
+      "type": "Fact",
+      "sourceId": "about"
+    }
+  ],
+  "companySections": [
+    {
+      "title": "Portugal in 2026",
+      "items": [
+        {
+          "title": "Strategy",
+          "text": "Devoteam says 2025 was the year of AI experimentation and 2026 is the year of AI value: move pilots into production with real ROI.",
+          "type": "Fact",
+          "sourceId": "portugal-2026"
+        },
+        {
+          "title": "Leadership",
+          "text": "A 4 September 2026 announcement names Nuno Oliveira Santos as General Director for Portugal and group Vice President for the global Microsoft pillar.",
+          "type": "Fact",
+          "sourceId": "leadership-2026"
+        },
+        {
+          "title": "Data & AI practice",
+          "text": "The 2024 Singularity integration announcement reported 100+ Data & AI specialists in Portugal and about 1,000 across EMEA.",
+          "type": "Fact",
+          "sourceId": "singularity"
+        },
+        {
+          "title": "Delivery footprint",
+          "text": "Official listings include Lisbon, Porto, and Aveiro; leadership describes Portugal as a competence and international delivery center.",
+          "type": "Fact",
+          "sourceId": "offices"
+        }
+      ]
+    },
+    {
+      "title": "Distributed Cloud",
+      "items": [
+        {
+          "title": "Likely meaning",
+          "text": "In this vacancy, Distributed Cloud appears to be the business unit connecting cloud engineering, managed services, and ML delivery rather than a narrow product name.",
+          "type": "Inference",
+          "sourceId": "cloud-managed"
+        },
+        {
+          "title": "Operational scope",
+          "text": "Public material covers public and hybrid cloud, cost, compliance, security, cloud data, and managed AI across AWS, Google Cloud, and Azure.",
+          "type": "Fact",
+          "sourceId": "cloud-managed"
+        },
+        {
+          "title": "Unknown project context",
+          "text": "The client, reporting line, geography, primary cloud, team composition, and on-call model are not public.",
+          "type": "Unknown",
+          "sourceId": "ml-role"
+        }
+      ]
+    },
+    {
+      "title": "Evidence warnings",
+      "items": [
+        {
+          "title": "Corporate figures differ by page",
+          "text": "A live job template still says 10,000+ people, 20+ countries, and €1B revenue, while the current corporate page says 11,000 and 25+. Use approximate current figures.",
+          "type": "Fact",
+          "sourceId": "ml-role"
+        },
+        {
+          "title": "Partner counts vary",
+          "text": "The Databricks page uses different certification totals in different passages. Say Devoteam has a substantial certified practice rather than quoting one exact count.",
+          "type": "Fact",
+          "sourceId": "databricks"
+        }
+      ]
+    }
+  ],
+  "clientCase": {
+    "title": "Salvador Caetano: used-vehicle price forecasting",
+    "summary": "Devoteam and NiW moved an Azure ML proof of concept into a production-ready pricing solution, reporting forecast error below 3%.",
+    "architecture": ["Azure Synapse Analytics", "Azure Data Factory", "Azure Machine Learning", "Azure Blob Storage", "Power BI"],
+    "whyItMatters": "A concrete example connecting forecasting, cloud data, production delivery, user adoption, and a measurable result.",
+    "interviewBridge": "Connect your demand-forecasting work to orchestration, refresh, monitoring, adoption, and decision impact.",
+    "type": "Fact",
+    "sourceId": "salvador-caetano"
+  },
+  "role": {
+    "summary": "Bridge research and production through reliable Python, scalable ML workflows, cloud delivery, and observability.",
+    "ambiguity": "The recruiter's stack overlaps two live vacancies: AI/Machine Learning Engineer and MLOps. Treat the exact title and project balance as unconfirmed.",
+    "possibleTitles": ["Distributed Cloud | AI/Machine Learning Engineer", "Distributed Cloud | MLOps"],
+    "responsibilities": [
+      "Design training, testing, and deployment pipelines.",
+      "Turn data-science prototypes into scalable production code.",
+      "Write robust, documented Python using strong engineering practices.",
+      "Monitor model quality, drift, system health, and reliability.",
+      "Collaborate with data engineers on preparation and infrastructure.",
+      "Package and orchestrate reproducible workloads with containers and cloud services.",
+      "For the adjacent MLOps role: build CI/CD/CT, version models and data, use IaC, and optimize serving cost and latency."
+    ],
+    "requirements": [
+      {
+        "area": "Core",
+        "items": ["Python, OOP, clean code", "TensorFlow, PyTorch, scikit-learn", "SQL, large datasets, warehousing", "Professional English"]
+      },
+      {
+        "area": "Lifecycle",
+        "items": ["Model deployment and versioning", "MLflow, Kubeflow, Airflow, or similar", "Monitoring, drift, and reliability"]
+      },
+      {
+        "area": "Platform",
+        "items": ["AWS, GCP, or Azure ML services", "Docker and Kubernetes", "Spark", "CI/CD; DVC and feature stores as pluses"]
+      }
+    ],
+    "askToClarify": [
+      "Exact title and seniority calibration",
+      "Client project versus capability pool",
+      "Primary cloud and lifecycle stack",
+      "Model development versus platform split",
+      "Batch versus online workload mix",
+      "Team, reporting line, and on-call model"
+    ]
+  },
+  "stories": [
+    {
+      "id": "forecasting",
+      "title": "Demand forecasting over 1M+ records",
+      "signal": "Forecasting · data scale · pipeline thinking",
+      "featured": true,
+      "summary": "Built a demand-forecasting pipeline over more than one million sales records for inventory-oriented planning.",
+      "evidence": ["Python and Spark-oriented processing", "Time-series workflow", "1M+ sales records", "Inventory planning context"],
+      "star": {
+        "situation": "High-volume transactional data with time-dependent demand.",
+        "task": "Turn raw sales records into a repeatable forecasting workflow.",
+        "action": "Discuss validation, time-aware splits, lag and rolling features, baselines, metrics, and reproducible processing.",
+        "result": "An end-to-end forecasting pipeline over 1M+ records.",
+        "reflection": "For production: data tests, experiment tracking, registry, drift monitoring, scheduled retraining, and fallback forecasts."
+      },
+      "useFor": ["ML project", "Forecasting", "Large datasets", "Pipeline design", "Business value"],
+      "boundary": "Do not claim production deployment or undocumented accuracy gains.",
+      "type": "Fact"
+    },
+    {
+      "id": "anomaly",
+      "title": "Hierarchical time-series anomaly detection",
+      "signal": "Research · statistics · ambiguity",
+      "featured": true,
+      "summary": "Thesis research on anomaly detection in hierarchical and grouped multidimensional time series.",
+      "evidence": ["Hierarchy-aware time series", "Anomaly detection", "Statistical modeling", "Operational-quality framing"],
+      "star": {
+        "situation": "Anomalies may appear at leaf, aggregate, or cross-series levels while labels are scarce.",
+        "task": "Define and evaluate a hierarchy-aware approach.",
+        "action": "Define anomaly taxonomy, preserve time order, avoid leakage, separate model score from alert policy, and plan feedback.",
+        "result": "A structured research program connecting time-series methods to operational monitoring.",
+        "reflection": "Production evaluation should include alert utility, label delay, root-cause workflow, and human feedback."
+      },
+      "useFor": ["Research depth", "Anomaly detection", "Ambiguity", "Evaluation", "Limitations"],
+      "boundary": "The thesis is in progress; do not imply completion, deployment, or undocumented results.",
+      "type": "Fact"
+    },
+    {
+      "id": "lexpt",
+      "title": "Tested, Dockerized Python AI service",
+      "signal": "Python · APIs · tests · containers",
+      "featured": true,
+      "summary": "Built a legal retrieval-augmented generation system spanning five Portuguese tribunals and EU legislation.",
+      "evidence": ["FastAPI and Pydantic", "pytest", "Docker", "BM25, vector retrieval, and reranking", "Multiple legal sources"],
+      "star": {
+        "situation": "Legal retrieval needs traceable, relevant results across heterogeneous sources.",
+        "task": "Build a maintainable Python retrieval and API pipeline.",
+        "action": "Separate ingestion, retrieval, reranking, generation, and API concerns; validate schemas; test components; package with Docker.",
+        "result": "A working tested service with hybrid retrieval and clear boundaries.",
+        "reflection": "For production: evaluation data, traces, SLOs, access controls, artifact versions, and staged rollout."
+      },
+      "useFor": ["Production Python", "Architecture", "Testing", "Docker", "Prototype to service"],
+      "boundary": "Do not claim Kubernetes, MLflow, enterprise scale, or guaranteed legal correctness.",
+      "type": "Fact"
+    },
+    {
+      "id": "saas",
+      "title": "Live SaaS ownership",
+      "signal": "Production · cloud · client value",
+      "featured": false,
+      "summary": "Delivered and maintains a live fitness-coaching SaaS for a paying client using managed cloud services.",
+      "evidence": ["Live paying client", "Ongoing maintenance", "Cloud Functions", "Replaced a prior setup costing about €150/month"],
+      "star": {
+        "situation": "A client needed a maintainable service without the previous server overhead.",
+        "task": "Deliver the product and own ongoing operation.",
+        "action": "Choose managed components, deploy, handle failures, maintain the service, and communicate trade-offs.",
+        "result": "A live service replacing a setup costing approximately €150 per month.",
+        "reflection": "The work built practical instincts about reliability, cost, releases, and ownership that transfer to ML services."
+      },
+      "useFor": ["Production ownership", "Stakeholders", "Cost", "Reliability", "Learning"],
+      "boundary": "Do not invent a savings percentage or unrelated scale metrics.",
+      "type": "Fact"
+    }
+  ],
+  "fit": {
+    "strong": ["Python ML and AI systems", "Forecasting and anomaly detection", "1M+ record data work", "SQL and major Python ML libraries", "Spark project exposure", "FastAPI, pytest, Docker, Git, and GitHub Actions", "Live production ownership", "Portuguese, English, and Mandarin"],
+    "partial": [
+      "MLOps principles are supported by tests, containers, CI, APIs, deployment, and monitoring design, not deep platform ownership.",
+      "Cloud production evidence is strongest in managed services, not named hyperscaler ML platforms.",
+      "Spark is project-level rather than enterprise cluster operations.",
+      "TensorFlow and PyTorch are project/training skills, not years of production ownership."
+    ],
+    "bridge": "I have not yet operated Kubernetes or MLflow in a production team, so I would not present that as hands-on depth. I do have the underlying delivery discipline: tested Python services, Docker, CI, reproducible data workflows, and production ownership. I can explain how I would apply those principles with a registry, deployment pipeline, observability, and rollback, and I am actively closing the tool-specific gap."
+  },
+  "process": [
+    {
+      "name": "Recruiter screen",
+      "confidence": "Likely",
+      "focus": ["Motivation", "Role alignment", "Experience timeline", "Location and work authorization", "Package alignment", "English", "High-level stack fit"],
+      "prepare": ["90-second introduction", "Why Devoteam", "Precise timeline", "Honest tool-gap bridge", "Five questions"],
+      "type": "Inference"
+    },
+    {
+      "name": "Technical conversation",
+      "confidence": "Likely",
+      "focus": ["Python quality", "End-to-end ML", "Forecasting or anomaly detection", "MLOps and monitoring", "Docker, Kubernetes, cloud", "Failure handling"],
+      "prepare": ["Draw an ML lifecycle", "Rehearse two deep dives", "Review drift and skew", "Know platform concepts honestly"],
+      "type": "Inference"
+    },
+    {
+      "name": "Manager or client fit",
+      "confidence": "Possible",
+      "focus": ["Consulting communication", "Ownership", "Ambiguity", "Stakeholders", "Project context"],
+      "prepare": ["Client SaaS story", "Failure and recovery", "Trade-off story", "First-90-days questions"],
+      "type": "Inference"
+    }
+  ],
+  "processUnknowns": ["Number of rounds", "Coding exercise or take-home", "Live system design", "Client interview", "Language split", "Decision timeline"],
+  "technical": [
+    {
+      "id": "lifecycle",
+      "title": "ML lifecycle",
+      "model": "A model is production-ready only when data, code, artifact, deployment, monitoring, and recovery are controlled together.",
+      "revision": ["Data contracts and lineage", "Point-in-time features", "Time-aware evaluation", "Experiment tracking", "Registry and promotion gates", "Batch or online serving", "CI/CD/CT", "Monitoring, retraining, rollback", "Security and cost"],
+      "framework": ["Start with the decision and success metric.", "Walk from data to feedback.", "Name failure modes and quality gates.", "Finish with ownership, observability, and rollback."],
+      "questions": ["Design a pipeline from notebook to production.", "What does production-ready mean?", "How would you retrain safely?"],
+      "cards": [
+        {"q": "CI vs CD vs CT?", "a": "CI validates code, tests, schemas, and builds. CD promotes an approved artifact. CT retrains and evaluates on a trigger; promotion still needs quality gates."},
+        {"q": "What belongs in a model registry?", "a": "Immutable artifacts and lineage: code, data, environment, metrics, signatures, owner, approval, and deployment history."},
+        {"q": "Why is ML rollback special?", "a": "Model, preprocessing, and feature definitions may need to roll back together under one compatible contract."}
+      ]
+    },
+    {
+      "id": "monitoring",
+      "title": "Monitoring and drift",
+      "model": "Monitor system, data, model, and business health separately; distribution shift is not automatically model failure.",
+      "revision": ["Availability, errors, latency, cost", "Schema, missingness, ranges", "Feature and prediction drift", "Delayed ground-truth metrics", "Slice and calibration behavior", "Business KPI and alert utility", "Training-serving skew", "Actionable alerts"],
+      "framework": ["Define reference windows and slices.", "Detect shifts early.", "Confirm impact when labels arrive.", "Choose investigation, retraining, recalibration, or rollback."],
+      "questions": ["How do you detect drift?", "What if labels arrive late?", "What triggers retraining?"],
+      "cards": [
+        {"q": "Data vs concept drift?", "a": "Data drift changes P(X); concept drift changes P(Y|X). Labels are usually needed to confirm the latter."},
+        {"q": "Does drift require retraining?", "a": "No. Confirm impact and diagnose expected change, transient shift, data bug, or true relationship change."},
+        {"q": "Ground truth is delayed. Now what?", "a": "Use proxy and input/prediction signals early, then backfill true quality metrics when labels arrive."}
+      ]
+    },
+    {
+      "id": "forecasting",
+      "title": "Forecasting",
+      "model": "The core risks are leakage, weak baselines, the wrong decision metric, and unreliable refresh.",
+      "revision": ["Rolling-origin validation", "Naive and seasonal baselines", "Lag and rolling features", "MAE, RMSE, WAPE, sMAPE", "Intermittent demand", "Cold starts and hierarchy", "Prediction intervals", "Monitoring by horizon and segment"],
+      "framework": ["Define grain, horizon, cadence, and decision.", "Build a strong baseline.", "Backtest using only available information.", "Explain metrics, refresh, monitoring, and fallback."],
+      "questions": ["How would you validate demand forecasts?", "Which metric would you choose?", "How would you handle new products?"],
+      "cards": [
+        {"q": "Why no random split?", "a": "It leaks future information. Use time-ordered or rolling-origin splits that match deployment."},
+        {"q": "Why a seasonal-naive baseline?", "a": "It reveals whether complexity adds value beyond repeatable seasonality."},
+        {"q": "How do you choose a metric?", "a": "Match the decision cost and data shape, report by slices, and avoid unstable percentage errors near zero."}
+      ]
+    },
+    {
+      "id": "anomalies",
+      "title": "Anomaly detection",
+      "model": "A detector is an alerting system: threshold, context, triage capacity, feedback, and cost of misses all matter.",
+      "revision": ["Point, contextual, collective, change-point", "Supervised to unsupervised", "Threshold and alert capacity", "Scarce and delayed labels", "Precision, recall, PR-AUC", "Alerts/day and time-to-detect", "Hierarchy and root-cause triage"],
+      "framework": ["Define anomaly operationally.", "Describe labels and alert budget.", "Choose method and threshold together.", "Evaluate false-positive burden and close the feedback loop."],
+      "questions": ["How do you evaluate without labels?", "How do you reduce false positives?", "What changes with hierarchy?"],
+      "cards": [
+        {"q": "Why not accuracy?", "a": "Rare anomalies make always-normal predictions look accurate. Use precision/recall, PR-AUC, alert burden, and delay."},
+        {"q": "What sets the threshold?", "a": "Costs of misses and false alerts, analyst capacity, calibration, and desired detection delay."},
+        {"q": "Contextual anomaly?", "a": "A value normal globally but abnormal for its time, season, segment, or hierarchy level."}
+      ]
+    },
+    {
+      "id": "features",
+      "title": "Feature stores",
+      "model": "A feature store governs reusable, point-in-time-correct features across training and inference; it is not just a shared table.",
+      "revision": ["Offline and online stores", "Historical point-in-time joins", "Training-serving consistency", "Definitions and ownership", "Lineage and discovery", "Freshness and backfill", "When complexity is unjustified"],
+      "framework": ["Start from reuse and latency needs.", "Explain time correctness and parity.", "Cover governance and freshness.", "Acknowledge when one batch model does not need it."],
+      "questions": ["What problem does it solve?", "How do you prevent skew?", "When would you not build one?"],
+      "cards": [
+        {"q": "Point-in-time correctness?", "a": "Training rows use only feature values available at that historical prediction timestamp."},
+        {"q": "Offline vs online store?", "a": "Offline supports historical bulk training retrieval; online supports low-latency current inference features."},
+        {"q": "When is it overkill?", "a": "One batch model with simple owned features, little reuse, and no low-latency serving need."}
+      ]
+    },
+    {
+      "id": "containers",
+      "title": "Docker, Kubernetes, and cloud",
+      "model": "Package a deterministic workload, expose safe operating signals, and choose managed components from workload and SLO needs.",
+      "revision": ["Small pinned non-root images", "Secrets outside images", "Readiness and liveness", "Pods, Deployments, Services, Jobs", "Requests and limits", "Rollout, autoscaling, rollback", "Storage, training, registry, serving", "IAM, networking, cost"],
+      "framework": ["Clarify batch/online and SLO.", "Describe image and runtime contract.", "Explain health, scale, and rollback.", "Map to a cloud only after requirements."],
+      "questions": ["How would you deploy on Kubernetes?", "Readiness versus liveness?", "How would you choose a cloud ML service?"],
+      "cards": [
+        {"q": "Readiness vs liveness?", "a": "Readiness controls traffic eligibility; liveness decides whether a stuck workload should restart."},
+        {"q": "Why requests and limits?", "a": "Requests guide scheduling; limits bound use. Bad values cause throttling, OOM kills, or waste."},
+        {"q": "When prefer batch inference?", "a": "When decisions tolerate latency and predictions can be precomputed; it is usually simpler and cheaper."}
+      ]
+    },
+    {
+      "id": "tools",
+      "title": "MLflow, Kubeflow, Airflow, and DVC",
+      "model": "These tools occupy different lifecycle layers; discuss the problem each solves instead of treating them as substitutes.",
+      "revision": ["MLflow: experiments and registry", "Kubeflow: Kubernetes-native ML workflows", "Airflow: general DAG orchestration", "DVC: Git-linked data/model versions", "CI/CD and object-store integration"],
+      "framework": ["Name the lifecycle problem.", "Describe artifact and metadata flow.", "Connect it to review and deployment gates.", "State conceptual versus hands-on depth."],
+      "questions": ["What would you track in MLflow?", "Kubeflow versus Airflow?", "How would you version data?"],
+      "cards": [
+        {"q": "MLflow vs Airflow?", "a": "MLflow tracks experiments, artifacts, and model metadata; Airflow schedules and coordinates arbitrary DAG tasks."},
+        {"q": "Kubeflow vs Kubernetes?", "a": "Kubernetes is general orchestration; Kubeflow adds ML-oriented workflow components and conventions."},
+        {"q": "What does DVC add to Git?", "a": "It versions references and pipelines for large artifacts stored outside Git in remote storage."}
+      ]
+    }
+  ],
+  "interviewQuestions": [
+    {
+      "id": "tell-me",
+      "category": "Recruiter",
+      "question": "Tell me about yourself.",
+      "featured": true,
+      "why": "Tests relevance, communication, timeline, and motivation.",
+      "guide": ["Lead with ML/AI engineering in Portugal.", "Name forecasting, anomaly detection, and production Python.", "Use the 1M+ pipeline, research, tested service, and live SaaS.", "Close with moving models into reliable cloud systems."],
+      "sample": "I am a machine-learning and AI engineer based in Portugal, with hands-on work across forecasting, anomaly detection, and Python AI services. I built a forecasting pipeline over more than one million records, I am researching hierarchical time-series anomaly detection, and I built a tested, Dockerized FastAPI retrieval system. I also maintain a live SaaS for a paying client, which has given me practical ownership of deployment, reliability, and cost trade-offs. I now want to deepen that production ML path.",
+      "watch": "Keep it under 90 seconds; do not list every technology."
+    },
+    {
+      "id": "why-devoteam",
+      "category": "Recruiter",
+      "question": "Why Devoteam?",
+      "featured": true,
+      "why": "Tests whether your interest is specific and informed.",
+      "guide": ["Portugal's AI-value strategy.", "Data & AI depth after Singularity.", "Cloud partners and learning culture.", "Salvador Caetano forecasting case."],
+      "sample": "Devoteam's focus on moving AI from experiments into production matches the direction I want to deepen. The Data & AI practice in Portugal and the Salvador Caetano forecasting case show the combination of ML, cloud engineering, and measurable client value that attracts me.",
+      "watch": "Do not answer only with the Tech for People slogan."
+    },
+    {
+      "id": "role-wanted",
+      "category": "Recruiter",
+      "question": "What kind of role are you looking for?",
+      "featured": true,
+      "why": "Calibrates the model-development and platform split.",
+      "guide": ["Hands-on ML engineering.", "Ownership from data and evaluation to service and monitoring.", "Learn from stronger platform engineers.", "Connect rigor to client value."],
+      "sample": "A hands-on ML engineering role where I can own meaningful lifecycle parts, from data and evaluation through production Python, deployment, and monitoring, while learning from engineers with deeper platform experience.",
+      "watch": "Stay flexible enough for more than one project."
+    },
+    {
+      "id": "tool-depth",
+      "category": "Recruiter",
+      "question": "How strong are you in Kubernetes, MLflow, or feature stores?",
+      "featured": true,
+      "why": "Checks honesty and transferability.",
+      "guide": ["State the hands-on boundary.", "Name Docker, tests, CI, APIs, data pipelines, and production ownership.", "Explain the tool's lifecycle role.", "Give a concrete learning plan."],
+      "sample": "I have not yet operated Kubernetes or MLflow in a production team, so I would not present that as hands-on depth. I do have the underlying delivery discipline through tested Python services, Docker, CI, reproducible workflows, and production ownership, and I understand how registry, deployment, monitoring, and rollback fit together.",
+      "watch": "Do not rely on 'I learn fast' without evidence."
+    },
+    {
+      "id": "experience",
+      "category": "Recruiter",
+      "question": "How does your experience meet the three-year requirement?",
+      "featured": true,
+      "why": "The vacancy explicitly lists 3+ years.",
+      "guide": ["Separate client software/AI delivery, academic research, and projects.", "Use exact timelines.", "Do not convert projects into employment.", "Ask how adjacent production engineering is weighted."],
+      "sample": "My experience combines independent production software and AI delivery, focused ML projects, and thesis research. I would separate those categories rather than claim three years under one formal ML Engineer title. The transferable production work is strongest in tested Python services, cloud delivery, and ongoing client ownership.",
+      "watch": "Precision is more credible than trying to force the timeline."
+    },
+    {
+      "id": "masters",
+      "category": "Recruiter",
+      "question": "Is your master's complete?",
+      "featured": false,
+      "why": "The role lists an advanced degree.",
+      "guide": ["Coursework is complete.", "Thesis is in progress.", "Name the anomaly-detection topic.", "Do not imply graduation."],
+      "sample": "The coursework is complete and the thesis is in progress. The research focuses on anomaly detection in hierarchical multidimensional time series.",
+      "watch": "Use 'candidate' or 'in progress', never 'completed'."
+    },
+    {
+      "id": "pipeline",
+      "category": "Technical",
+      "question": "Design a pipeline from notebook to production.",
+      "featured": false,
+      "why": "Directly tests the core role mandate.",
+      "guide": ["Define contract and metric.", "Validate and version data.", "Track experiments and register immutable artifacts.", "Test, package, stage, monitor, retrain, and roll back."],
+      "sample": "I would start with the decision contract and acceptance metric, build point-in-time-correct data and evaluation, track code/data/environment with experiments, register an immutable artifact after quality gates, package batch or API serving, deploy progressively, and monitor system, data, model, and business health with a defined rollback path.",
+      "watch": "Do not make the answer a tool-name list."
+    },
+    {
+      "id": "drift",
+      "category": "Technical",
+      "question": "How would you detect and respond to model drift?",
+      "featured": false,
+      "why": "Monitoring and drift are explicit responsibilities.",
+      "guide": ["Separate data, concept, and performance change.", "Monitor reference windows and slices.", "Use proxies until labels arrive.", "Tie alerts to investigation, retraining, recalibration, or rollback."],
+      "sample": "I would monitor schemas, feature and prediction distributions, system health, and delayed ground-truth metrics by important slices. A drift alert starts diagnosis; it does not automatically trigger retraining. The action depends on confirmed impact and root cause.",
+      "watch": "Drift is not synonymous with performance degradation."
+    },
+    {
+      "id": "failure",
+      "category": "Behavioral",
+      "question": "Tell me about a pipeline or production failure.",
+      "featured": false,
+      "why": "The recruiter explicitly joked about failed pipelines.",
+      "guide": ["Use one real incident.", "Explain detection and user impact.", "Own the decision and recovery.", "Finish with the prevention added afterward."],
+      "sample": "",
+      "watch": "Do not invent an outage; choose a documented project or client-service incident."
+    }
+  ],
+  "questionsToAsk": [
+    {"category": "Scope", "question": "I found both the AI/Machine Learning Engineer and MLOps vacancies. Which description is closest to this project?", "priority": "Must ask"},
+    {"category": "Scope", "question": "What percentage of the work is model development versus platform and production engineering?", "priority": "Must ask"},
+    {"category": "Scope", "question": "Is the role attached to a specific client or hired into a broader capability team?", "priority": "Must ask"},
+    {"category": "Stack", "question": "Which cloud platform and ML lifecycle tools are actually in production today?", "priority": "Must ask"},
+    {"category": "Success", "question": "What would I be expected to own in the first 90 days?", "priority": "Must ask"},
+    {"category": "Quality", "question": "What does the team consider production-ready for an ML system?", "priority": "Strong"},
+    {"category": "Operations", "question": "How are models versioned, promoted, monitored, and rolled back?", "priority": "Strong"},
+    {"category": "Team", "question": "What is the seniority mix, and who reviews ML and platform decisions?", "priority": "Strong"},
+    {"category": "Learning", "question": "How does the learning-company model work in practice: protected time, mentoring, certifications, or rotations?", "priority": "Strong"},
+    {"category": "Process", "question": "What are the remaining interview stages and what will each assess?", "priority": "Must ask"},
+    {"category": "Package", "question": "What is the approved compensation range and how is the package structured?", "priority": "Must ask"}
+  ],
+  "dueDiligence": {
+    "facts": [
+      "Related public vacancies are full-time permanent contracts.",
+      "Devoteam is a consultancy, so client allocation can materially shape the work.",
+      "The company publicly emphasizes learning, certifications, diversity, and internal mobility.",
+      "Portuguese offices are listed in Lisbon, Porto, and Aveiro."
+    ],
+    "anecdotes": [
+      "Crowd-sourced reviews contain both positive reports about colleagues, learning, and work-life balance and negative reports about compensation, project allocation, and management consistency.",
+      "These reviews are self-selected, may be stale, and may refer to different teams or countries."
+    ],
+    "verify": [
+      "Legal employer and contract terms",
+      "Base versus total package and benefits",
+      "Hybrid/on-site pattern and travel",
+      "Project allocation and between-project policy",
+      "On-call or after-hours expectations",
+      "Training terms and repayment clauses",
+      "Review and promotion cadence"
+    ]
+  },
+  "checklist": [
+    {"id": "intro", "group": "Recruiter", "label": "Rehearse the 90-second introduction", "priority": "High"},
+    {"id": "why", "group": "Recruiter", "label": "Rehearse Why Devoteam with three specifics", "priority": "High"},
+    {"id": "stories", "group": "Evidence", "label": "Prepare the four project stories in STAR form", "priority": "High"},
+    {"id": "architecture", "group": "Technical", "label": "Draw one full ML lifecycle from memory", "priority": "High"},
+    {"id": "monitoring", "group": "Technical", "label": "Review drift, skew, alerts, retraining, and rollback", "priority": "High"},
+    {"id": "forecast", "group": "Technical", "label": "Review time-aware forecasting validation and metrics", "priority": "High"},
+    {"id": "kubernetes", "group": "Technical", "label": "Review Docker and Kubernetes fundamentals", "priority": "Medium"},
+    {"id": "tools", "group": "Technical", "label": "Explain MLflow, Kubeflow, Airflow, and DVC distinctly", "priority": "Medium"},
+    {"id": "gaps", "group": "Evidence", "label": "Practice the honest tool-gap bridge", "priority": "High"},
+    {"id": "questions", "group": "Recruiter", "label": "Select five questions to ask", "priority": "High"},
+    {"id": "role", "group": "Due diligence", "label": "Confirm title, project, stack, and process", "priority": "High"},
+    {"id": "package", "group": "Due diligence", "label": "Clarify contract, work model, and package structure", "priority": "Medium"}
+  ],
+  "sources": [
+    {"id": "ml-role", "title": "Distributed Cloud | AI/Machine Learning Engineer", "publisher": "Devoteam / SmartRecruiters", "type": "Primary", "url": "https://jobs.smartrecruiters.com/Devoteam/744000100393940-distributed-cloud-ai-machine-learning-engineer", "date": "Accessed 2026-09-18"},
+    {"id": "mlops-role", "title": "Distributed Cloud | MLOps", "publisher": "Devoteam / SmartRecruiters", "type": "Primary", "url": "https://jobs.smartrecruiters.com/Devoteam/744000116463337-distributed-cloud-mlops-", "date": "Accessed 2026-09-18"},
+    {"id": "about", "title": "About Devoteam: AI-driven tech consulting", "publisher": "Devoteam", "type": "Primary", "url": "https://www.devoteam.com/about-us/", "date": "Accessed 2026-09-18"},
+    {"id": "portugal-2026", "title": "Mensagem de Ano Novo", "publisher": "Devoteam Portugal", "type": "Primary", "url": "https://www.devoteam.com/pt/news-and-pr/mensagem-de-ano-novo/", "date": "Published 2026-01-06"},
+    {"id": "leadership-2026", "title": "Nuno Oliveira Santos assumes Portugal leadership", "publisher": "Devoteam press release via Lift", "type": "Primary", "url": "https://newsroom.lift.com.pt/470256-nuno-oliveira-santos-assume-funcoes-globais-no-grupo-devoteam-e-passa-a-liderar-a-sua-operacao-em-portugal", "date": "Published 2026-09-04"},
+    {"id": "singularity", "title": "Singularity is now Devoteam", "publisher": "Devoteam Portugal", "type": "Primary", "url": "https://www.devoteam.com/pt/news-and-pr/o-posicionamento-de-data-ai-da-devoteam-esta-mais-forte-em-portugal-a-singularity-e-agora-devoteam/", "date": "Published 2024-10-02"},
+    {"id": "salvador-caetano", "title": "AI-driven used-vehicle price forecasting", "publisher": "Devoteam", "type": "Primary", "url": "https://www.devoteam.com/success-story/ai-driven-acceleration-of-used-vehicle-price-forecasting/", "date": "Accessed 2026-09-18"},
+    {"id": "cloud-managed", "title": "Cloud Managed Services", "publisher": "Devoteam", "type": "Primary", "url": "https://www.devoteam.com/pt/servicos/servicos-geridos-na-cloud/", "date": "Accessed 2026-09-18"},
+    {"id": "databricks", "title": "Databricks Gold Consulting Partner", "publisher": "Devoteam", "type": "Primary", "url": "https://www.devoteam.com/news-and-pr/devoteam-achieves-databricks-elite-partnership/", "date": "Accessed 2026-09-18"},
+    {"id": "offices", "title": "Devoteam office locations", "publisher": "Devoteam", "type": "Primary", "url": "https://www.devoteam.com/pt/nossos-escritorios/", "date": "Accessed 2026-09-18"},
+    {"id": "teamlyzer", "title": "Devoteam Portugal reviews", "publisher": "Teamlyzer", "type": "Anecdotal", "url": "https://pt.teamlyzer.com/companies/devoteam-portugal", "date": "Accessed 2026-09-18"},
+    {"id": "candidate-evidence", "title": "Verified candidate project record", "publisher": "Private source", "type": "Candidate evidence", "url": "", "date": "Validated 2026-09-18"}
+  ]
+}

@@ -1,0 +1,203 @@
+/**
+ * dong-ui — local, dependency-free cream / near-black theme tokens.
+ * Theme selection is controlled by html.dark in theme.js.
+ */
+
+:root {
+  --background: 44 22% 96%;
+  --foreground: 36 25% 4%;
+  --card: 0 0% 100%;
+  --card-foreground: 36 25% 4%;
+  --primary: 173 78% 26%;
+  --primary-foreground: 0 0% 100%;
+  --secondary: 44 15% 91%;
+  --secondary-foreground: 36 15% 18%;
+  --muted: 44 15% 91%;
+  --muted-foreground: 40 8% 34%;
+  --border: 44 14% 84%;
+  --ring: 173 78% 31%;
+  --success: 151 55% 30%;
+  --warning: 38 90% 27%;
+  --danger: 0 68% 42%;
+  --nav-glass: 44 22% 96% / 0.82;
+  --radius: 0.75rem;
+  --font-sans: "Segoe UI", "Inter", system-ui, -apple-system, BlinkMacSystemFont,
+    Roboto, Helvetica, Arial, sans-serif;
+  color-scheme: light;
+}
+
+html.dark {
+  --background: 0 0% 8%;
+  --foreground: 40 8% 93%;
+  --card: 0 0% 12%;
+  --card-foreground: 40 8% 93%;
+  --primary: 171 52% 52%;
+  --primary-foreground: 0 0% 7%;
+  --secondary: 0 0% 17%;
+  --secondary-foreground: 40 8% 93%;
+  --muted: 0 0% 17%;
+  --muted-foreground: 0 0% 74%;
+  --border: 0 0% 25%;
+  --ring: 171 52% 58%;
+  --success: 151 50% 57%;
+  --warning: 42 81% 62%;
+  --danger: 0 72% 68%;
+  --nav-glass: 0 0% 8% / 0.86;
+  color-scheme: dark;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: var(--font-sans);
+  color: hsl(var(--foreground));
+  background: hsl(var(--background));
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+button,
+input,
+select {
+  font: inherit;
+}
+
+a {
+  color: hsl(var(--primary));
+  text-underline-offset: 0.18em;
+  text-decoration-thickness: 0.08em;
+}
+
+a:hover {
+  text-decoration-thickness: 0.13em;
+}
+
+:focus-visible {
+  outline: 3px solid hsl(var(--ring));
+  outline-offset: 3px;
+}
+
+::selection {
+  color: hsl(var(--primary-foreground));
+  background: hsl(var(--primary));
+}
+
+.nav-glass {
+  background: hsl(var(--nav-glass));
+  -webkit-backdrop-filter: blur(18px) saturate(1.4);
+  backdrop-filter: blur(18px) saturate(1.4);
+}
+
+.ui-card {
+  color: hsl(var(--card-foreground));
+  background: hsl(var(--card));
+  border: 1px solid hsl(var(--border));
+  border-radius: var(--radius);
+  box-shadow: 0 1px 2px hsl(0 0% 0% / 0.05);
+}
+
+.ui-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.45rem;
+  min-height: 2.75rem;
+  padding: 0.55rem 0.9rem;
+  border: 1px solid transparent;
+  border-radius: 0.6rem;
+  color: hsl(var(--primary-foreground));
+  background: hsl(var(--primary));
+  font-weight: 700;
+  line-height: 1;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.ui-button:hover {
+  filter: brightness(1.06);
+}
+
+.ui-button--secondary {
+  color: hsl(var(--secondary-foreground));
+  background: hsl(var(--secondary));
+  border-color: hsl(var(--border));
+}
+
+.ui-button--ghost {
+  color: hsl(var(--foreground));
+  background: transparent;
+  border-color: hsl(var(--border));
+}
+
+.dong-theme-toggle {
+  display: inline-grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  width: 4rem;
+  min-width: 4rem;
+  height: 2.75rem;
+  padding: 0.22rem;
+  border: 1px solid hsl(var(--border));
+  border-radius: 999px;
+  color: hsl(var(--foreground));
+  background: hsl(var(--card));
+  cursor: pointer;
+  position: relative;
+}
+
+.dong-theme-toggle::after {
+  content: "";
+  position: absolute;
+  top: 0.23rem;
+  left: 0.23rem;
+  width: 2.15rem;
+  height: 2.15rem;
+  border-radius: 50%;
+  background: hsl(var(--primary));
+  transition: transform 180ms ease;
+}
+
+html.dark .dong-theme-toggle::after {
+  transform: translateX(1.35rem);
+}
+
+.dong-theme-toggle__icon {
+  display: grid;
+  place-items: center;
+  z-index: 1;
+  font-size: 0.78rem;
+  line-height: 1;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+@media (forced-colors: active) {
+  .ui-card,
+  .ui-button,
+  .dong-theme-toggle {
+    border: 1px solid CanvasText;
+  }
+}
