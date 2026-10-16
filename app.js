@@ -117,7 +117,7 @@
   }
 
   function card(title, text, type, sourceId) {
-    var node = element("article", "content-card ui-card");
+    var node = element("article", "content-card ui-card dx-card");
     append(node, badgeRow(type, sourceId), element("h3", "", title), element("p", "", text));
     return searchable(node, { title: title, text: text }, type);
   }
@@ -165,7 +165,7 @@
         return item.featured;
       })
       .forEach(function (item) {
-        var fact = element("article", "fact-card ui-card");
+        var fact = element("article", "fact-card ui-card dx-card");
         append(
           fact,
           badgeRow(item.type, item.sourceId),
@@ -187,7 +187,7 @@
       })
       .slice(0, 3)
       .forEach(function (item) {
-        var node = element("article", "content-card ui-card");
+        var node = element("article", "content-card ui-card dx-card");
         append(
           node,
           categoryBadge(item.signal),
@@ -209,7 +209,7 @@
       })
       .slice(0, 5)
       .forEach(function (item) {
-        var node = element("article", "content-card ui-card");
+        var node = element("article", "content-card ui-card dx-card");
         append(
           node,
           badgeRow("Inference", "", categoryBadge(item.category)),
@@ -228,7 +228,7 @@
     var root = element("div", "stack");
     var factGrid = element("div", "grid grid--four");
     data.companyFacts.forEach(function (item) {
-      var node = element("article", "fact-card ui-card");
+      var node = element("article", "fact-card ui-card dx-card");
       append(
         node,
         badgeRow(item.type, item.sourceId),
@@ -250,7 +250,7 @@
     });
 
     root.appendChild(element("h3", "subsection-title", "Client case to know"));
-    var caseCard = element("article", "content-card ui-card");
+    var caseCard = element("article", "content-card ui-card dx-card");
     append(
       caseCard,
       badgeRow(data.clientCase.type, data.clientCase.sourceId),
@@ -269,11 +269,11 @@
 
   function renderRole(data) {
     var root = element("div", "stack");
-    var intro = element("article", "quote-card ui-card");
+    var intro = element("article", "quote-card ui-card dx-card");
     intro.appendChild(element("p", "", data.role.summary));
     root.appendChild(searchable(intro, data.role.summary));
 
-    var ambiguity = element("article", "content-card ui-card");
+    var ambiguity = element("article", "content-card ui-card dx-card");
     append(
       ambiguity,
       badgeRow("Inference", "mlops-role"),
@@ -285,11 +285,11 @@
     root.appendChild(searchable(ambiguity, data.role, "Inference"));
 
     var columns = element("div", "grid grid--two");
-    var work = element("article", "content-card ui-card");
+    var work = element("article", "content-card ui-card dx-card");
     append(work, element("h3", "", "Verified responsibilities"), list(data.role.responsibilities));
     columns.appendChild(searchable(work, data.role.responsibilities, "Fact"));
 
-    var clarify = element("article", "content-card ui-card");
+    var clarify = element("article", "content-card ui-card dx-card");
     append(
       clarify,
       badgeRow("Unknown"),
@@ -302,23 +302,23 @@
     root.appendChild(element("h3", "subsection-title", "Requirement clusters"));
     var requirements = element("div", "grid grid--three");
     data.role.requirements.forEach(function (group) {
-      var node = element("article", "content-card ui-card");
+      var node = element("article", "content-card ui-card dx-card");
       append(node, element("h3", "", group.area), list(group.items));
       requirements.appendChild(searchable(node, group, "Fact"));
     });
     root.appendChild(requirements);
 
     var fit = element("div", "grid grid--two");
-    var strong = element("article", "content-card ui-card");
+    var strong = element("article", "content-card ui-card dx-card");
     append(strong, element("h3", "", "Strong evidence"), list(data.fit.strong));
     fit.appendChild(searchable(strong, data.fit.strong, "Fact"));
-    var partial = element("article", "content-card ui-card");
+    var partial = element("article", "content-card ui-card dx-card");
     append(partial, element("h3", "", "Transferable evidence"), list(data.fit.partial));
     fit.appendChild(searchable(partial, data.fit.partial, "Fact"));
     root.appendChild(element("h3", "subsection-title", "Fit map"));
     root.appendChild(fit);
 
-    var bridge = element("article", "quote-card ui-card");
+    var bridge = element("article", "quote-card ui-card dx-card");
     append(bridge, element("h3", "", "Evidence-depth answer"), element("p", "", data.fit.bridge));
     root.appendChild(searchable(bridge, data.fit.bridge, "Fact"));
 
@@ -338,7 +338,7 @@
   function renderStories(data) {
     var root = element("div", "stack");
     data.stories.forEach(function (story) {
-      var details = element("details", "expand-card ui-card");
+      var details = element("details", "expand-card ui-card dx-card");
       details.id = "story-" + safeId(story.id);
       var summary = element("summary");
       var summaryCopy = element("span");
@@ -375,7 +375,7 @@
     var root = element("div", "stack");
     var grid = element("div", "grid grid--three");
     data.process.forEach(function (stage, index) {
-      var node = element("article", "content-card ui-card");
+      var node = element("article", "content-card ui-card dx-card");
       append(
         node,
         badgeRow(stage.type, "", categoryBadge("Stage " + (index + 1) + " · " + stage.confidence)),
@@ -389,7 +389,7 @@
     });
     root.appendChild(grid);
 
-    var unknown = element("article", "content-card ui-card");
+    var unknown = element("article", "content-card ui-card dx-card");
     append(
       unknown,
       badgeRow("Unknown"),
@@ -427,7 +427,7 @@
   function renderTechnical(data) {
     var root = element("div", "stack");
     data.technical.forEach(function (topic, index) {
-      var details = element("details", "expand-card ui-card technical-topic");
+      var details = element("details", "expand-card ui-card dx-card technical-topic");
       if (index === 0) details.open = true;
       var summary = element("summary");
       var copy = element("span");
@@ -467,7 +467,7 @@
   function renderQuestions(data) {
     var root = element("div", "stack");
     data.interviewQuestions.forEach(function (question) {
-      var details = element("details", "expand-card ui-card answer-card");
+      var details = element("details", "expand-card ui-card dx-card answer-card");
       var summary = element("summary");
       var copy = element("span");
       append(
@@ -499,7 +499,7 @@
   function renderAsk(data) {
     var root = element("ol", "ask-list");
     data.questionsToAsk.forEach(function (item, index) {
-      var node = element("li", "ask-item ui-card");
+      var node = element("li", "ask-item ui-card dx-card");
       var number = element("span", "ask-item__number", index + 1);
       var copy = element("div");
       var badges = element("div", "badge-row");
@@ -512,7 +512,7 @@
   }
 
   function diligenceCard(title, items, type) {
-    var node = element("article", "content-card ui-card");
+    var node = element("article", "content-card ui-card dx-card");
     append(node, badgeRow(type), element("h3", "", title), list(items));
     return searchable(node, items, type);
   }
@@ -561,7 +561,7 @@
     state.checklist = loadChecklistState();
     var root = element("ul", "checklist-list");
     data.checklist.forEach(function (item) {
-      var node = element("li", "checklist-item ui-card");
+      var node = element("li", "checklist-item ui-card dx-card");
       var label = element("label");
       var checkbox = element("input");
       checkbox.type = "checkbox";
@@ -589,7 +589,7 @@
   function renderSources(data) {
     var root = element("ol", "source-list");
     data.sources.forEach(function (source) {
-      var item = element("li", "source-item ui-card");
+      var item = element("li", "source-item ui-card dx-card");
       item.id = "source-" + safeId(source.id);
       var evidenceType = source.type === "Anecdotal" ? "Anecdote" : "Fact";
       append(
@@ -711,7 +711,7 @@
         if (!active) return;
         links.forEach(function (link, id) {
           if (id === active.target.id) {
-            link.setAttribute("aria-current", "location");
+            link.setAttribute("aria-current", "page");
           } else {
             link.removeAttribute("aria-current");
           }

@@ -10,25 +10,24 @@
       content="Privacy-sanitized preparation dashboard for a Devoteam Distributed Cloud AI and Machine Learning Engineering interview."
     />
     <title>Devoteam Interview Prep</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>D</text></svg>" />
+    <link href="https://fonts.googleapis.com/css2?family=Encode+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="./dong-ui/theme.css" />
+    <link rel="stylesheet" href="/ui/shell.css?v=1" />
     <link rel="stylesheet" href="./styles.css" />
     <script src="./dong-ui/theme.js"></script>
     <script src="./app.js" defer></script>
   </head>
-  <body>
+  <body class="dx">
     <a class="skip-link" href="#main-content">Skip to main content</a>
-    <div class="page-background" aria-hidden="true"></div>
 
-    <header class="site-header nav-glass">
-      <a class="brand" href="#top" aria-label="Devoteam interview prep home">
-        <span class="brand-mark" aria-hidden="true">D</span>
-        <span>
-          <strong>Devoteam Prep</strong>
-          <small>AI / ML engineering</small>
-        </span>
+    <header class="dx-header">
+      <a class="dx-home" href="/" aria-label="Home">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg>
       </a>
-      <div class="header-actions">
-        <button class="print-button ui-button ui-button--ghost" id="print-page" type="button">
+      <h1 class="dx-title">Devoteam Interview Prep</h1>
+      <div class="dx-actions">
+        <button class="print-button dx-btn dx-btn--ghost" id="print-page" type="button">
           Print
         </button>
         <button
@@ -43,28 +42,26 @@
       </div>
     </header>
 
-    <nav class="section-nav nav-glass" aria-label="Study sections">
-      <div class="section-nav__track">
-        <a href="#quick" data-nav-section="quick">Start</a>
-        <a href="#company" data-nav-section="company">Company</a>
-        <a href="#role" data-nav-section="role">Role</a>
-        <a href="#stories" data-nav-section="stories">Proof</a>
-        <a href="#process" data-nav-section="process">Process</a>
-        <a href="#technical" data-nav-section="technical">Technical</a>
-        <a href="#questions" data-nav-section="questions">Answers</a>
-        <a href="#ask" data-nav-section="ask">Ask</a>
-        <a href="#diligence" data-nav-section="diligence">Verify</a>
-        <a href="#checklist" data-nav-section="checklist">Checklist</a>
-        <a href="#sources" data-nav-section="sources">Sources</a>
-      </div>
+    <nav class="dx-tabs" aria-label="Study sections">
+      <a class="dx-tab" href="#quick" data-nav-section="quick" aria-current="page">Start</a>
+      <a class="dx-tab" href="#company" data-nav-section="company">Company</a>
+      <a class="dx-tab" href="#role" data-nav-section="role">Role</a>
+      <a class="dx-tab" href="#stories" data-nav-section="stories">Proof</a>
+      <a class="dx-tab" href="#process" data-nav-section="process">Process</a>
+      <a class="dx-tab" href="#technical" data-nav-section="technical">Technical</a>
+      <a class="dx-tab" href="#questions" data-nav-section="questions">Answers</a>
+      <a class="dx-tab" href="#ask" data-nav-section="ask">Ask</a>
+      <a class="dx-tab" href="#diligence" data-nav-section="diligence">Verify</a>
+      <a class="dx-tab" href="#checklist" data-nav-section="checklist">Checklist</a>
+      <a class="dx-tab" href="#sources" data-nav-section="sources">Sources</a>
     </nav>
 
     <div id="top"></div>
 
     <section class="hero" aria-labelledby="page-title">
-      <div class="hero__copy">
+      <div class="hero__copy dx-card">
         <p class="eyebrow">Interview field guide · updated <span id="updated-date">—</span></p>
-        <h1 id="page-title">Move the conversation from tools to reliable ML delivery.</h1>
+        <h2 id="page-title">Move the conversation from tools to reliable ML delivery.</h2>
         <p class="hero__hypothesis" id="role-hypothesis">Loading role hypothesis…</p>
         <div
           class="tag-row"
@@ -73,18 +70,18 @@
           aria-label="Core role topics"
         ></div>
       </div>
-      <aside class="hero__brief ui-card" aria-labelledby="objective-title">
+      <aside class="hero__brief dx-card" aria-labelledby="objective-title">
         <div class="hero__brief-top">
           <span class="signal-dot" aria-hidden="true"></span>
           <span id="role-confidence">Loading…</span>
         </div>
         <h2 id="objective-title">Conversation objective</h2>
         <p id="interview-objective">Loading preparation data…</p>
-        <a class="ui-button" href="#quick">Start the two-minute brief</a>
+        <a class="dx-btn" href="#quick">Start the two-minute brief</a>
       </aside>
     </section>
 
-    <div class="study-controls nav-glass" role="search" aria-label="Filter study guide">
+    <div class="study-controls dx-card" role="search" aria-label="Filter study guide">
       <div class="search-field">
         <label for="global-search">Search the guide</label>
         <input
@@ -106,18 +103,18 @@
           <option value="Unknown">Unknowns</option>
         </select>
       </div>
-      <button class="ui-button ui-button--secondary" id="clear-filters" type="button">
+      <button class="dx-btn dx-btn--ghost" id="clear-filters" type="button">
         Clear
       </button>
       <p class="filter-status" id="filter-status" role="status" aria-live="polite"></p>
     </div>
 
     <main id="main-content" tabindex="-1">
-      <div class="load-status ui-card" id="load-status" role="status" aria-live="polite">
+      <div class="load-status dx-card" id="load-status" role="status" aria-live="polite">
         Loading the interview guide…
       </div>
 
-      <section class="study-section" id="quick" aria-labelledby="quick-title">
+      <section class="study-section dx-card" id="quick" aria-labelledby="quick-title">
         <div class="section-heading">
           <div>
             <p class="eyebrow">Start here</p>
@@ -128,7 +125,7 @@
         <div id="quick-content"></div>
       </section>
 
-      <section class="study-section" id="company" aria-labelledby="company-title">
+      <section class="study-section dx-card" id="company" aria-labelledby="company-title">
         <div class="section-heading">
           <div>
             <p class="eyebrow">Context</p>
@@ -139,7 +136,7 @@
         <div id="company-content"></div>
       </section>
 
-      <section class="study-section" id="role" aria-labelledby="role-title">
+      <section class="study-section dx-card" id="role" aria-labelledby="role-title">
         <div class="section-heading">
           <div>
             <p class="eyebrow">Target</p>
@@ -150,7 +147,7 @@
         <div id="role-content"></div>
       </section>
 
-      <section class="study-section" id="stories" aria-labelledby="stories-title">
+      <section class="study-section dx-card" id="stories" aria-labelledby="stories-title">
         <div class="section-heading">
           <div>
             <p class="eyebrow">Your evidence</p>
@@ -161,7 +158,7 @@
         <div id="stories-content"></div>
       </section>
 
-      <section class="study-section" id="process" aria-labelledby="process-title">
+      <section class="study-section dx-card" id="process" aria-labelledby="process-title">
         <div class="section-heading">
           <div>
             <p class="eyebrow">Likely path</p>
@@ -172,7 +169,7 @@
         <div id="process-content"></div>
       </section>
 
-      <section class="study-section" id="technical" aria-labelledby="technical-title">
+      <section class="study-section dx-card" id="technical" aria-labelledby="technical-title">
         <div class="section-heading">
           <div>
             <p class="eyebrow">Revision</p>
@@ -183,20 +180,20 @@
         <div id="technical-content"></div>
       </section>
 
-      <section class="study-section" id="questions" aria-labelledby="questions-title">
+      <section class="study-section dx-card" id="questions" aria-labelledby="questions-title">
         <div class="section-heading section-heading--actions">
           <div>
             <p class="eyebrow">Practice</p>
             <h2 id="questions-title">Likely questions and answer guidance</h2>
           </div>
-          <button class="ui-button ui-button--secondary" id="toggle-answers" type="button">
+          <button class="dx-btn dx-btn--ghost" id="toggle-answers" type="button">
             Expand all answers
           </button>
         </div>
         <div id="questions-content"></div>
       </section>
 
-      <section class="study-section" id="ask" aria-labelledby="ask-title">
+      <section class="study-section dx-card" id="ask" aria-labelledby="ask-title">
         <div class="section-heading">
           <div>
             <p class="eyebrow">Reverse interview</p>
@@ -207,7 +204,7 @@
         <div id="ask-content"></div>
       </section>
 
-      <section class="study-section" id="diligence" aria-labelledby="diligence-title">
+      <section class="study-section dx-card" id="diligence" aria-labelledby="diligence-title">
         <div class="section-heading">
           <div>
             <p class="eyebrow">Due diligence</p>
@@ -218,7 +215,7 @@
         <div id="diligence-content"></div>
       </section>
 
-      <section class="study-section" id="checklist" aria-labelledby="checklist-title">
+      <section class="study-section dx-card" id="checklist" aria-labelledby="checklist-title">
         <div class="section-heading">
           <div>
             <p class="eyebrow">Final pass</p>
@@ -235,7 +232,7 @@
         <div id="checklist-content"></div>
       </section>
 
-      <section class="study-section" id="sources" aria-labelledby="sources-title">
+      <section class="study-section dx-card" id="sources" aria-labelledby="sources-title">
         <div class="section-heading">
           <div>
             <p class="eyebrow">Evidence</p>
@@ -247,7 +244,7 @@
       </section>
     </main>
 
-    <footer class="site-footer">
+    <footer class="site-footer dx-card">
       <p>Privacy-sanitized interview study guide. No analytics, trackers, or cloud-stored checklist data.</p>
       <a href="#top">Back to top</a>
     </footer>

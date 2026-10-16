@@ -60,9 +60,9 @@ html {
 body {
   margin: 0;
   min-height: 100vh;
-  font-family: var(--font-sans);
-  color: hsl(var(--foreground));
-  background: hsl(var(--background));
+  font-family: var(--dx-font, var(--font-sans));
+  color: var(--dx-fg, hsl(var(--foreground)));
+  background: transparent;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
 }
@@ -74,7 +74,7 @@ select {
 }
 
 a {
-  color: hsl(var(--primary));
+  color: var(--dx-primary, hsl(var(--primary)));
   text-underline-offset: 0.18em;
   text-decoration-thickness: 0.08em;
 }
@@ -84,7 +84,7 @@ a:hover {
 }
 
 :focus-visible {
-  outline: 3px solid hsl(var(--ring));
+  outline: 3px solid var(--dx-ring, hsl(var(--ring)));
   outline-offset: 3px;
 }
 
@@ -100,11 +100,11 @@ a:hover {
 }
 
 .ui-card {
-  color: hsl(var(--card-foreground));
-  background: hsl(var(--card));
-  border: 1px solid hsl(var(--border));
-  border-radius: var(--radius);
-  box-shadow: 0 1px 2px hsl(0 0% 0% / 0.05);
+  color: var(--dx-fg, hsl(var(--card-foreground)));
+  background: var(--dx-card-solid, hsl(var(--card)));
+  border: 1px solid var(--dx-border, hsl(var(--border)));
+  border-radius: var(--dx-radius, var(--radius));
+  box-shadow: var(--dx-shadow, 0 1px 2px hsl(0 0% 0% / 0.05));
 }
 
 .ui-button {
@@ -112,12 +112,12 @@ a:hover {
   align-items: center;
   justify-content: center;
   gap: 0.45rem;
-  min-height: 2.75rem;
+  min-height: 44px;
   padding: 0.55rem 0.9rem;
   border: 1px solid transparent;
-  border-radius: 0.6rem;
-  color: hsl(var(--primary-foreground));
-  background: hsl(var(--primary));
+  border-radius: var(--dx-radius-sm, 0.6rem);
+  color: var(--dx-primary-fg, hsl(var(--primary-foreground)));
+  background: var(--dx-primary, hsl(var(--primary)));
   font-weight: 700;
   line-height: 1;
   text-decoration: none;
@@ -129,15 +129,15 @@ a:hover {
 }
 
 .ui-button--secondary {
-  color: hsl(var(--secondary-foreground));
-  background: hsl(var(--secondary));
-  border-color: hsl(var(--border));
+  color: var(--dx-fg, hsl(var(--secondary-foreground)));
+  background: var(--dx-card, hsl(var(--secondary)));
+  border-color: var(--dx-border, hsl(var(--border)));
 }
 
 .ui-button--ghost {
-  color: hsl(var(--foreground));
-  background: transparent;
-  border-color: hsl(var(--border));
+  color: var(--dx-fg, hsl(var(--foreground)));
+  background: var(--dx-card, transparent);
+  border-color: var(--dx-border, hsl(var(--border)));
 }
 
 .dong-theme-toggle {
@@ -148,10 +148,10 @@ a:hover {
   min-width: 4rem;
   height: 2.75rem;
   padding: 0.22rem;
-  border: 1px solid hsl(var(--border));
+  border: 1px solid var(--dx-border, hsl(var(--border)));
   border-radius: 999px;
-  color: hsl(var(--foreground));
-  background: hsl(var(--card));
+  color: var(--dx-fg, hsl(var(--foreground)));
+  background: var(--dx-card-solid, hsl(var(--card)));
   cursor: pointer;
   position: relative;
 }
@@ -164,7 +164,7 @@ a:hover {
   width: 2.15rem;
   height: 2.15rem;
   border-radius: 50%;
-  background: hsl(var(--primary));
+  background: var(--dx-primary, hsl(var(--primary)));
   transition: transform 180ms ease;
 }
 
@@ -176,8 +176,14 @@ html.dark .dong-theme-toggle::after {
   display: grid;
   place-items: center;
   z-index: 1;
+  color: var(--dx-muted, hsl(var(--muted-foreground)));
   font-size: 0.78rem;
   line-height: 1;
+}
+
+html:not(.dark) .dong-theme-toggle__icon:first-child,
+html.dark .dong-theme-toggle__icon:last-child {
+  color: var(--dx-primary-fg, hsl(var(--primary-foreground)));
 }
 
 @media (prefers-reduced-motion: reduce) {
